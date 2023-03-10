@@ -1,4 +1,5 @@
 @import '../reset/reset';
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");
 
 $primary-color: #f7dc8a;
 $secondary-color: #ffffff;
@@ -16,13 +17,169 @@ $large: 24px;
 $reg: 16px;
 $small: 8px;
 
+:root {
+    --deg: -86deg;
+    --trans: all 0.4s ease 0s;
+}
+
+body {
+    font-family: "Lato", Arial, Helvetica, serif;
+    font-size: $font-large;
+}
+
 .header {
     background-color: $accent-color;
     color: $secondary-color;
 }
 
+.team-members {
+    background-color: $accent-color;
+}
+
 .team {
-    background-color: $primary-color;
+    padding: 2em 0 2em 2.5em;
+    margin: 0;
+}
+
+.member {
+    margin: 1.5em 0 0.5em;
+    padding: 0.73em;
+    background: $primary-color;
+    position: relative;
+    list-style: none;
+    display: inline-block;
+    transform: scale(0.85);
+    transition: var(--trans);
+
+    @media screen and (min-width: 1200px) {
+        width: 75%;
+    }
+}
+
+.member:nth-of-type(even) {
+    text-align: right;
+    background: $primary-color;
+}
+
+.thumb {
+    width: 13vmin;
+    height: 13vmin;
+    float: left;
+    margin-right: 1.25em;
+    background: linear-gradient(var(--deg),
+            var($accent-color) 0 70%,
+            var($primary-color) 0% 100%);
+    transform: rotate(-4deg);
+    transition: var(--trans);
+    border-radius: 0.25em;
+    overflow: hidden;
+    margin-left: -3em;
+    padding: 0.5em;
+}
+
+.member:nth-of-type(even) .thumb {
+    --deg: 86deg;
+    float: right;
+    margin-left: 2em;
+    margin-right: -3em;
+    transform: rotate(4deg);
+}
+
+.thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.25em;
+    filter: grayscale(1);
+    background: var($accent-color);
+}
+
+.member:hover {
+    transform: scale(1);
+    transition: var(--trans);
+    filter: drop-shadow(0px 20px 10px #0008);
+}
+
+.member:hover .thumb {
+    padding: 0.1em;
+    transition: var(--trans);
+    transform: rotate(-1deg);
+    --deg: -89deg;
+}
+
+.member:nth-of-type(even):hover .thumb {
+    --deg: 91deg;
+}
+
+.member:hover .thumb img {
+    filter: none;
+    transition: var(--trans);
+}
+
+.description {
+    padding-top: 1vmin;
+}
+
+.description p {
+    padding: 0 2em;
+    margin-bottom: 1em;
+}
+
+.team h3 {
+    background: linear-gradient(182deg, #fff0 60%, var($primary-color) 0 100%) !important;
+    display: inline;
+    transform: rotate(-2deg);
+    position: absolute;
+    margin: 0;
+    margin-top: -2.25em;
+    left: 9vmin;
+    padding: 0.5em 0.75em;
+    color: white !important;
+    border-radius: 0.25em;
+    font-size: $font-xlarge;
+    transform-origin: left bottom;
+}
+
+.member:nth-of-type(even) h3 {
+    left: inherit;
+    right: 9vmin;
+    transform: rotate(2deg);
+    transform-origin: right bottom;
+    background: linear-gradient(-182deg, #fff0 60%, var($accent-color) 0 100%);
+}
+
+.member:hover h3 {
+    transition: var(--trans);
+    transform: rotate(0deg);
+    background: linear-gradient(180deg, #fff0 59%, var($accent-color) 0 100%);
+}
+
+.description p a {
+    display: inline-block;
+    margin: 0.5em 0 0 0;
+    background: var($accent-color);
+    color: var($primary-color);
+    padding: 0.1em 0.5em 0.35em;
+    border-radius: 0.5em;
+    text-decoration: none;
+    transition: var(--trans);
+}
+
+.description p a:hover {
+    transition: var(--trans);
+    color: var($accent-color);
+    background: var($primary-color);
+    font-weight: bold;
+}
+
+.description p a img {
+    float: left;
+    width: 22px;
+    filter: invert(1);
+    border-radius: 0.15em;
+    padding: 2px;
+    background: #fff;
+    margin-right: 2px;
 }
 
 .concepts {
@@ -92,8 +249,13 @@ $small: 8px;
 }
 
 .footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
     background-color: $accent-color;
+    padding: 0 32px 0 32px;
     color: $secondary-color;
+    height: 100px;
+    display: flex;
+    align-items: center;
 }
-
-
