@@ -28,8 +28,86 @@ body {
 }
 
 .header {
+    display: flex;
     background-color: $accent-color;
-    color: $secondary-color;
+    align-items: center;
+    gap: 30px;
+    
+    &__h1 {
+        font-size: $font-xxlarge;
+        color: $secondary-color;
+    }
+
+    &__logo {
+        height: 80px;
+        width: auto;
+    }
+}
+
+.concepts {
+    background-color: $primary-color;
+
+    .concept {
+
+        &__header {
+            font-size: $font-xlarge;
+            font-weight: bold;
+            text-align: center;
+            padding: $xlarge;
+        }
+
+        &__image--header {
+            max-width: 50%;
+            height: auto;
+
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: $xlarge;
+
+            border: 2px solid $accent-color;
+        }
+
+        &__content {
+            max-width: 50%;
+            font-size: $font-large;
+            text-align: center;
+
+            margin-left: auto;
+            margin-right: auto;
+            padding-bottom: $xlarge;
+        }
+
+        &__ratings {
+            display: flex;
+            justify-content: space-evenly;
+
+            max-width: 50%;
+            font-size: $font-large;
+            text-align: center;
+
+            margin-left: auto;
+            margin-right: auto;
+            padding-bottom: $xlarge;
+
+            &--positive {
+                max-width: 40%;
+                text-align: left;
+            }
+
+            &--negative {
+                text-align: left;
+                max-width: 40%;
+            }
+        }
+
+        &__rating {
+            
+            &--strong {
+                font-weight: bold;
+            }
+        }
+    }
 }
 
 .team-members {
@@ -39,6 +117,9 @@ body {
 .team {
     padding: 2em 0 2em 2.5em;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .member {
@@ -182,80 +263,9 @@ body {
     margin-right: 2px;
 }
 
-.concepts {
-    background-color: $primary-color;
-
-    .concept {
-
-        &__header {
-            font-size: $font-xlarge;
-            font-weight: bold;
-            text-align: center;
-            padding: $xlarge;
-        }
-
-        &__image--header {
-            max-width: 50%;
-            height: auto;
-
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            margin-bottom: $xlarge;
-
-            border: 2px solid $accent-color;
-        }
-
-        &__content {
-            max-width: 50%;
-            font-size: $font-large;
-            text-align: center;
-
-            margin-left: auto;
-            margin-right: auto;
-            padding-bottom: $xlarge;
-        }
-
-        &__ratings {
-            display: flex;
-            justify-content: space-evenly;
-
-            max-width: 50%;
-            font-size: $font-large;
-            text-align: center;
-
-            margin-left: auto;
-            margin-right: auto;
-            padding-bottom: $xlarge;
-
-            &--positive {
-                max-width: 40%;
-                text-align: left;
-            }
-
-            &--negative {
-                text-align: left;
-                max-width: 40%;
-            }
-        }
-
-        &__rating {
-            
-            &--strong {
-                font-weight: bold;
-            }
-        }
-    }
-}
-
 .footer {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    background-color: $accent-color;
-    padding: 0 32px 0 32px;
-    color: $secondary-color;
-    height: 100px;
-    display: flex;
-    align-items: center;
+    background-color: $primary-color;
+    color: $accent-color;
+    text-align: center;
+    padding: $xlarge;
 }
