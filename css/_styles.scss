@@ -1,6 +1,6 @@
 @import '../reset/reset';
 
-$primary-color: #f4c227;
+$primary-color: #f7dc8a;
 $secondary-color: #ffffff;
 $accent-color: #000000;
 
@@ -9,6 +9,12 @@ $font-xlarge: 32px;
 $font-large: 24px;
 $font-reg: 16px;
 $font-small: 8px;
+
+$xxlarge: 40px;
+$xlarge: 32px;
+$large: 24px;
+$reg: 16px;
+$small: 8px;
 
 .header {
     background-color: $accent-color;
@@ -19,8 +25,70 @@ $font-small: 8px;
     background-color: $primary-color;
 }
 
-.concept {
+.concepts {
     background-color: $primary-color;
+
+    .concept {
+
+        &__header {
+            font-size: $font-xlarge;
+            font-weight: bold;
+            text-align: center;
+            padding: $xlarge;
+        }
+
+        &__image--header {
+            max-width: 50%;
+            height: auto;
+
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: $xlarge;
+
+            border: 2px solid $accent-color;
+        }
+
+        &__content {
+            max-width: 50%;
+            font-size: $font-large;
+            text-align: center;
+
+            margin-left: auto;
+            margin-right: auto;
+            padding-bottom: $xlarge;
+        }
+
+        &__ratings {
+            display: flex;
+            justify-content: space-evenly;
+
+            max-width: 50%;
+            font-size: $font-large;
+            text-align: center;
+
+            margin-left: auto;
+            margin-right: auto;
+            padding-bottom: $xlarge;
+
+            &--positive {
+                max-width: 40%;
+                text-align: left;
+            }
+
+            &--negative {
+                text-align: left;
+                max-width: 40%;
+            }
+        }
+
+        &__rating {
+            
+            &--strong {
+                font-weight: bold;
+            }
+        }
+    }
 }
 
 .footer {
