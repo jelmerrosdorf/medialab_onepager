@@ -1,24 +1,21 @@
-// Variables
+@import '../reset/reset';
 
-$primary-color: yellow;
-$secondary-color: white;
-$accent-color: black;
+$primary-color: #f4c227;
+$secondary-color: #ffffff;
+$accent-color: #000000;
 
 .header {
     background-color: $accent-color;
     color: $secondary-color;
 }
 
-
 .team {
     background-color: $primary-color;
 }
 
-
 .concept {
     background-color: $primary-color;
 }
-
 
 .footer {
     background-color: $accent-color;
