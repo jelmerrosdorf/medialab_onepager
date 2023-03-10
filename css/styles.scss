@@ -1,0 +1,28 @@
+// Variables
+
+$primary-color: yellow;
+$secondary-color: white;
+$accent-color: black;
+
+.header {
+    background-color: $accent-color;
+    color: $secondary-color;
+}
+
+
+.team {
+    background-color: $primary-color;
+}
+
+
+.concept {
+    background-color: $primary-color;
+}
+
+
+.footer {
+    background-color: $accent-color;
+    color: $secondary-color;
+}
+
+
