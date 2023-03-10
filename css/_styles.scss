@@ -110,6 +110,35 @@ body {
     }
 }
 
+@media only screen and (max-width: 1000px) {
+    .concepts {
+    
+        .concept {
+    
+            &__image--header {
+                max-width: 90%;
+            }
+    
+            &__content {
+                max-width: 90%;
+            }
+    
+            &__ratings {
+                max-width: 90%;
+    
+                &--positive {
+                    max-width: 50%;
+                    text-align: left;
+                }
+    
+                &--negative {
+                    max-width: 50%;
+                }
+            }
+        }
+    }
+}
+
 .team-members {
     background-color: $accent-color;
 }
