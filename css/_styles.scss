@@ -76,6 +76,7 @@ body {
             margin-left: auto;
             margin-right: auto;
             padding-bottom: $xlarge;
+
         }
 
         &__ratings {
@@ -107,6 +108,31 @@ body {
                 font-weight: bold;
             }
         }
+
+        &__grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            gap: $reg;
+            padding-bottom: $reg;
+
+            &--card {
+                border: 2px solid $accent-color;
+                margin: $reg;
+
+                &--header {
+                    font-weight: bold;
+                    margin: $reg;
+                }
+
+                &--content {
+                    margin: $reg;
+                }
+            }
+        }
     }
 }
 
@@ -121,6 +147,9 @@ body {
     
             &__content {
                 max-width: 90%;
+            }
+            &__grid {
+                display: block;
             }
     
             &__ratings {
@@ -293,8 +322,8 @@ body {
 }
 
 .footer {
-    background-color: $primary-color;
-    color: $accent-color;
+    background-color: $accent-color;
+    color: $primary-color;
     text-align: center;
     padding: $xlarge;
 }
