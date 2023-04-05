@@ -327,3 +327,24 @@ body {
     text-align: center;
     padding: $xlarge;
 }
+
+
+.concept__ul {
+    list-style-type: circle;
+    text-align: left;
+  }
+  
+  .concept__ul p {
+    margin-bottom: 16px;
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  .concept__li {
+    margin-bottom: 12px;
+  }
+  
+  .concept__video {
+    width: 100%;
+    margin-top: 32px;
+  }
