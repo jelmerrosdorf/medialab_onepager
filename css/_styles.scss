@@ -336,8 +336,7 @@ body {
   
   .concept__ul p {
     margin-bottom: 16px;
-    font-weight: 600;
-    text-align: center;
+    text-align: start;
   }
   
   .concept__li {
@@ -347,4 +346,8 @@ body {
   .concept__video {
     width: 100%;
     margin-top: 32px;
+  }
+
+  .concept__li--text {
+    margin-top: 16px;
   }
